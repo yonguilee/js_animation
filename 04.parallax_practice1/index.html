@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>01-Side Navigation</title>
+    <link rel="stylesheet" type="text/css" href="css/style.css"/>
+</head>
+<body>
+    <div class="section_wrap">
+    <div class="section1" id="section1"></div>
+    <div class="section2" id="section2"></div>
+    <div class="section3" id="section3"></div>
+    <div class="section4" id="section4"></div>
+    <div class="section5" id="section5"></div>
+    </div>
+    <ul class="navi_bx">
+        <li class="navi1"><a href="#section1"></a></li>
+        <li class="navi2"><a href="#section2"></a></li>
+        <li class="navi3"><a href="#section3"></a></li>
+        <li class="navi4"><a href="#section4"></a></li>
+        <li class="navi5"><a href="#section5"></a></li>
+    </ul>
+</body>
+
+<script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
+<script>
+        $('.navi_bx a[href*="#"]').on('click', function (e) {            
+            $('html,body').animate({
+                scrollTop: $($(this).attr('href')).offset().top - 140
+            }, 600);
+            e.preventDefault();
+
+            $(".navi_bx li").removeClass('is_active');
+            $(this).parent().addClass('is_active');
+
+            console.log($($(this).attr('href')).offset().top);
+        });
+
+        $(window).on('scroll', function() {// 스크롤 위치 확인
+            var nowPos = $(this).scrollTop();
+
+            //console.log(nowPos);
+        });
+
+        $('body>div').click(function(){//section 요소 height 확인
+            var sectionHeight = $(this).height();
+            //console.log(sectionHeight);
+        });
+        
+        var scrollToAnchor = function(){
+
+            function scrollToAnchor (section,navi){
+                console.log(section,navi);
+
+                if($('.section_wrap').length>0){
+                    var targetSection = $(section);
+                    var sectionHeight = targetSection.height();
+                    var targetNavi = $(navi);
+                    var sectionPos = targetSection.offset().top;
+                }
+                console.log(sectionPos);
+
+                $(window).on('scroll', function() {// 스크롤이벤트
+                    var nowPos = $(window).scrollTop();
+
+                    if(sectionPos -140 < nowPos < sectionPos + sectionHeight + 140){
+                        $('.navi_bx li').removeClass('is_active');
+                        targetNavi.addClass('is_active');
+                    }
+                });
+
+            }
+
+            scrollToAnchor('section1','navi1');
+            scrollToAnchor('section2','navi2');
+            scrollToAnchor('section3','navi3');
+            scrollToAnchor('section4','navi4');
+            scrollToAnchor('section5','navi5');
+        }
+
+        $(window).on('load', function () {
+
+            scrollToAnchor();
+
+        });
+</script>
+</html>

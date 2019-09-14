@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>02-fadeIn</title>
+    <link rel="stylesheet" type="text/css" href="css/style.css"/>
+</head>
+<body>
+    <div class="section_wrap">
+    <div class="section1" id="section1"></div>
+    <div class="section2" id="section2">
+        <ul class="target_lst">
+            <li>box1</li>
+            <li>box2</li>
+            <li>box3</li>
+            <li>box4</li>
+        </ul>
+    </div>
+    <div class="section3" id="section3"></div>
+    <div class="section4" id="section4"></div>
+    <div class="section5" id="section5"></div>
+    </div>
+</body>
+
+<script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
+<script>
+$(document).ready(function() {
+
+    $(window).scroll(function(){
+        $('.target_lst li').each(function(i){
+            var objectHeight = $(this).offset().top + $(this).outerHeight();
+            var windowHeight = $(window).scrollTop() + $(window).height();
+
+            if(windowHeight > objectHeight/2){
+                $(this).animate({opacity:'1', 'margin-top':'0'},1000);
+            }
+        });
+    });
+});
+
+</script>
+</html>

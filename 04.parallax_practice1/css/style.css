@@ -1,0 +1,40 @@
+article,aside,body,button,dd,dialog,div,dl,dt,fieldset,figure,footer,form,h1,h2,h3,h4,h5,h6,header,input,legend,li,main,nav,ol,p,section,select,table,td,textarea,th,ul{margin:0;padding:0}
+article,aside,dialog,figure,footer,header,main,nav,section{display:block}
+body,html{height:100%}
+body,button,input,select,textarea{font-family:'Noto Sans KR',sans-serif;font-weight:400;font-size:18px;color:#999}
+fieldset,img,li{border:0;vertical-align:top}
+ol,ul{list-style:none}
+button{overflow:visible;border:0;background-color:transparent;cursor:pointer}
+button::-moz-focus-inner{padding:0;border:0}
+address,caption,em{font-style:normal}
+a,a:active,a:focus,a:hover{text-decoration:none}
+a:active,a:focus,a:hover{background-color:transparent}
+table{border-collapse:collapse;border-spacing:0}
+.blind,legend{overflow:hidden;position:absolute;top:0;left:0;width:1px;height:1px;font-size:1px;line-height:100px;white-space:nowrap}
+.skip{height:0}
+.skip a{display:block;position:absolute;left:0;top:-100px;width:100%;height:25px;text-align:center}
+
+
+.section_wrap{position:relative;width:100%;height:100%;}
+.section_wrap div{width:100%;height:800px}
+.section1{background:url(../img/heic0910e.jpg);background-size:cover;background-attachment:fixed}
+.section2{background:url(../img/heic1501a.jpg);background-size:cover;background-attachment:fixed}
+.section3{background:url(../img/heic1608a.jpg);background-size:cover;background-attachment:fixed}
+.section4{background:pink}
+.section5{background:gold}
+
+.navi_bx{position:fixed;top:50%;right:50px;transform:translateY(-50%)}
+
+.navi_bx li a{position:relative;display:inline-block;width:15px;height:15px;margin:20px 0;background:#ddd;border-radius:50%;transition: all ease .6s}
+.navi_bx li a:before{content:'01';display:inline-block;font-weight:bold;color:blue;opacity:0;transition: all ease .6s}
+.navi_bx .navi2 a:before{content:'02'}
+.navi_bx .navi3 a:before{content:'03'}
+.navi_bx .navi4 a:before{content:'04'}
+.navi_bx .navi5 a:before{content:'05'}
+
+.navi_bx li a:after{content:'';position:absolute;top:50%;right:-120px;width:50px;height:1px;background:#ddd;transition: all ease .6s}
+
+.navi_bx li.is_active a{background:transparent}
+.navi_bx li.is_active a:before{opacity:1}
+.navi_bx li.is_active a:after{right:-62px;background:blue}
+
