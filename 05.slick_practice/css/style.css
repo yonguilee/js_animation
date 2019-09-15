@@ -1,0 +1,28 @@
+article,aside,body,button,dd,dialog,div,dl,dt,fieldset,figure,footer,form,h1,h2,h3,h4,h5,h6,header,input,legend,li,main,nav,ol,p,section,select,table,td,textarea,th,ul{margin:0;padding:0}
+article,aside,dialog,figure,footer,header,main,nav,section{display:block}
+body,html{height:100%}
+body,button,input,select,textarea{font-family:'Noto Sans KR',sans-serif;font-weight:400;font-size:18px;color:#999}
+fieldset,img,li{border:0;vertical-align:top}
+ol,ul{list-style:none}
+button{overflow:visible;border:0;background-color:transparent;cursor:pointer}
+button::-moz-focus-inner{padding:0;border:0}
+address,caption,em{font-style:normal}
+a,a:active,a:focus,a:hover{text-decoration:none}
+a:active,a:focus,a:hover{background-color:transparent}
+table{border-collapse:collapse;border-spacing:0}
+.blind,legend{overflow:hidden;position:absolute;top:0;left:0;width:1px;height:1px;font-size:1px;line-height:100px;white-space:nowrap}
+.skip{height:0}
+.skip a{display:block;position:absolute;left:0;top:-100px;width:100%;height:25px;text-align:center}
+
+.section1{position:relative;height:100vh;background:pink}
+.section1 .slick_wrap{position:absolute;top:100px;left:50%;transform:translate(-50%)}
+.section1 .slick_wrap div{width:400px;height:200px;}
+.section1 .slick_wrap div p{width:380px;height:180px;margin:10px;background:#fff;border:1px solid #000;font-size:30px;line-height:180px;text-align:center;font-weight:bold}
+
+.slick-arrow{position:absolute;top:50%;transform:translateY(-50%)}
+.slick-prev{left:-60px;background:url(../img/ico_arrow_l.png) no-repeat;background-size:100% auto;width:50px;height:50px;overflow:hidden;text-indent:-9999px}
+.slick-next{right:-60px;background:url(../img/ico_arrow_r.png) no-repeat;background-size:100% auto;width:50px;height:50px;overflow:hidden;text-indent:-9999px}
+
+.slick-dots{text-align:center;}
+.slick-dots li{display:inline-block;margin:15px 5px 0;width:15px;height:15px;background:#ddd;border-radius:50%;overflow:hidden;text-indent:-999px;}
+.slick-dots li.slick-active{background:blueviolet}

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>01-Side Navigation</title>
+    <link rel="stylesheet" type="text/css" href="css/style.css"/>
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+</head>
+<body>
+    <div class="section_wrap">
+        <div class="section1" id="section1">
+            <div class="slick_wrap">
+                <div>
+                    <p>1</p>
+                </div>
+                <div>
+                    <p>2</p>
+                </div>
+                <div>
+                    <p>3</p>
+                </div>
+                <div>
+                    <p>4</p>
+                </div>
+                <div>
+                    <p>5</p>
+                </div>
+                <div>
+                    <p>6</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
+<script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+<script>
+    $(document).ready(function(){
+      $('.slick_wrap').slick({
+        arrows:true,
+        dots: true,
+        infinite: true,
+        slidesToShow: 3,
+        slidesToScroll: 3,
+        speed: 300,
+        autoplay: true,
+        autoplaySpeed: 2000,
+        pauseOnHover: true,
+        centerMode: true,
+        variableWidth: true
+      });
+    });
+</script>
+</html>
